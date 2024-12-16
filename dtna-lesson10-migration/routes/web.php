@@ -16,10 +16,3 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-
-#sinhvien-model1
-route ::get('/dtna-sinhviens',[dtnaSinhVienController::class,'dtnaList'])->name('dtnaSinhVien.dtnaList');
-route ::get('/dtna-sinhvien/create',[dtnaSinhVienController::class,'dtnaCreate'])->name('dtnaSinhVien.dtnaCreate');
-route ::post('/dtna-sinhvien/create',[dtnaSinhVienController::class,'dtnaCreateSubmit'])->name('dtnaSinhVien.dtnaCreateSubmit');
-
-
