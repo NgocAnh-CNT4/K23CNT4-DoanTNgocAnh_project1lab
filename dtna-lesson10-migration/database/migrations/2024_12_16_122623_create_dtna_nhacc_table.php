@@ -12,8 +12,13 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('dtna_nhacc', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+           //$table->id();
+           $table->string('dtnaMaNCC')->primary();
+           $table->string('dtnaTenNCC');
+           $table->string('dtnaDiaChi');
+           $table->string('dtnaDienThoai');
+
+            //$table->timestamps();
         });
     }
 

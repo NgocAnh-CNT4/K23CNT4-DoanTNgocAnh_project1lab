@@ -12,8 +12,12 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('dtnadondh', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+            //$table->id();
+            $table->string('dtnaSoDH')->primary();
+            $table->string('dtnaNgayDH');
+            $table->string('dtnaMaNCC');
+            $table->foreign('dtnaMaNCC')->references('dtnaMaNCC')->on('dtnanhacc');
+            //$table->timestamps();
         });
     }
 

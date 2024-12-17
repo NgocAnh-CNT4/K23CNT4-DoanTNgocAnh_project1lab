@@ -12,8 +12,12 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('dtnavattu', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+           // $table->id();
+           $table->string('dtnaMaVtu')->primary();
+           $table->string('dtnaTenVtu')->unique();
+           $table->string('dtnaDvTinh');
+           $table->float('dtnaPhanTram');
+           // $table->timestamps();
         });
     }
 
