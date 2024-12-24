@@ -8,4 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class DTNA_QUAN_TRI extends Model
 {
     use HasFactory;
+    Protected $table="DTNA_QUAN_TRI";
 }

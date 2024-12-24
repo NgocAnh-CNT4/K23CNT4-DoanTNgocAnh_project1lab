@@ -16,3 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+route::get('/admins/dtna-login',[DTNA_QUAN_TRIController::class,'dtnaLogin'])->name ('admins.dtnaLogin');
+route::get('/admins/dtna-login',[DTNA_QUAN_TRIController::class,'dtnaLoginSubmit'])->name ('admins.dtnaLoginSubmit');
