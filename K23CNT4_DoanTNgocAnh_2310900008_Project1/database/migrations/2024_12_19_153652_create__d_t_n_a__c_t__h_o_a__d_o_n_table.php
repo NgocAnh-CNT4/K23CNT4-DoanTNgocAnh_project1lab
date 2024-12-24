@@ -11,21 +11,23 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('DTNA_QUAN_TRI', function (Blueprint $table) {
+        Schema::create('DTNA_CT_HOA_DON', function (Blueprint $table) {
             $table->id();
-            $table->string('dtnaTaiKhoan',225)->unique();
-            $table->string('dtnaMatKhau' ,225);
+            $table->bigInteger('dtnaHoaDonID')->refrences('id')->on('DTNA_HOA_DON');
+            $table->bigInteger('dtnaSamPhamID')->refrences('id')->on('DTNA_SAN_PHAM');
+            $table->Integer('dtnaSoLuongMua');
+            $table->float('dtnaDonGiaMua');
+            $table->float('dtnaThanhTien');
             $table->tinyInteger('dtnaTrangThai');
             $table->timestamps();
         });
     }
-
 
     /**
      * Reverse the migrations.
      */
     public function down(): void
     {
-        Schema::dropIfExists('DTNA_QUAN_TRI');
+        Schema::dropIfExists('DTNA_CT_HOA_DON');
     }
 };

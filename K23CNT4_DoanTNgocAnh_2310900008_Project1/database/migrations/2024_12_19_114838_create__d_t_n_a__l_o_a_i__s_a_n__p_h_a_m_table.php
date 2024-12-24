@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('DTNA_LOAI_SAN_PHAM', function (Blueprint $table) {
             $table->id();
+            $table-> string('dtnaMaLoai',255)->unique();
+            $table-> string('dtnaTenLoai',255);
+            $table->tinyInteger ('dtnaTrangThai');
             $table->timestamps();
         });
     }

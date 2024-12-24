@@ -21,6 +21,8 @@ class DatabaseSeeder extends Seeder
         
         $this->call([
             DTNA_QUAN_TRITableSeeder::class;
+            DTNA_LOAI_SAN_PHAMTableSeeder::class;
+            DTNA_SAN_PHAMTableSeeder::class;
         ]);
     }
 }
